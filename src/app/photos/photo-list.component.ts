@@ -12,6 +12,7 @@ export class PhotoListComponent implements OnInit{
 	thumbWidth:number = 150;
 	thumbMarg:number = 1;
 	photoType:string = "All";
+	favoritePhotos:IPhoto[];
 	photos:IPhoto[] = [
 		{
 			"id" :0,
@@ -28,6 +29,16 @@ export class PhotoListComponent implements OnInit{
 			"favorite" : false
 		}
 	];
+	
+	constructor(){
+		this.favoritePhotos = this.setFavorites();
+	}
+	
+	setFavorites():IPhoto[]{
+		return this.photos.filter((photo: IPhoto) => 
+		photo.favorite == true);
+	}
+	
 	
 	ngOnInit():void{
 		console.log("Hey we're in oninit!");
