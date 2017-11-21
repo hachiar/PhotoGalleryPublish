@@ -1,0 +1,12 @@
+.single-photo-container {
+	width: 80vw;
+}
+
+.single-photo-img {
+	width: 100%;
+}
+
+.single-photo-img img {
+	width: 100%;
+	max-height: 400px;
+}
