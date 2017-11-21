@@ -16,16 +16,33 @@ export class PhotoListComponent implements OnInit{
 	photos:IPhoto[] = [
 		{
 			"id" :0,
-			"name": "00",
+			"name": "Weihnachtsbaum",
 			"url" : "https://image.freepik.com/free-vector/collection-of-cartoon-christmas-trees_23-2147717781.jpg",
-			"rating" : 5,
+			"rating" : 3.5,
 			"favorite" : true
-		},
-		{
-			"id" :0,
-			"name": "00",
+		},{
+			"id" :1,
+			"name": "Tiere tragen Pullis",
 			"url" : "https://image.freepik.com/free-vector/collection-of-six-beautiful-animals-with-winter-clothes_23-2147716790.jpg",
-			"rating" : 5,
+			"rating" : 4,
+			"favorite" : true
+		},{
+			"id" : 2,
+			"name": "Adventskalender",
+			"url" : "https://image.freepik.com/free-vector/cute-hand-drawn-advent-calendar-on-a-grey-background_23-2147715182.jpg",
+			"rating" : 4.5,
+			"favorite" : false
+		},{
+			"id" : 3,
+			"name": "Schneemann",
+			"url" : "https://image.freepik.com/free-vector/snowmen-background-in-vintage-style_23-2147714212.jpg",
+			"rating" : 4.8,
+			"favorite" : true
+		},{
+			"id" : 4,
+			"name": "Lebkuchenmann",
+			"url" : "https://image.freepik.com/free-vector/pack-of-nice-gingerbread-cookies_23-2147714300.jpg",
+			"rating" : 4,
 			"favorite" : false
 		}
 	];

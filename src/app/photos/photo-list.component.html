@@ -24,17 +24,21 @@
 <h2>All Photos</h2>
 <div *ngIf='photos && photos.length'>
 	<div *ngFor='let photo of photos' class='photoPrev'>
-		<b>id:</b> {{photo.id}} <br>
-		<b>name:</b> {{photo.name}} <br>
-		<img	[src]='photo.url' 
-				[title]='photo.name'
-				/><br>
-		<b>rating:</b> {{photo.rating}} <br>
+		<img [src]='photo.url' 
+			 [title]='photo.name'/><br>
+
+		<div class="table-row">
+			<div  class="table-cell">
+				<b>{{photo.name}}</b><br/>
+				<!-- <app-star></app-star> -->
+				<b>rating:</b> {{photo.rating}} <br>
+			</div>
+			<span class="table-cell">
+				<i class="fa fa-heart" aria-hidden="true" *ngIf='photo.favorite'></i>
+				<i class="fa fa-heart-o" aria-hidden="true" *ngIf='!photo.favorite'></i>
+			</span>
+		</div>
+
 	</div>
 </div>
 
-
-
-
-
-<!--[style.width]='thumbWidth' -->
