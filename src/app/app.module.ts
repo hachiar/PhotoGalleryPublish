@@ -4,15 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PhotoListComponent } from './photos/photo-list.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-
+import { StarComponent } from './shared/star.component';
 import { PhotoComponent } from './photo/photo.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-	  PhotoListComponent,
-    PhotoComponent
+	PhotoListComponent,
+    PhotoComponent,
+	StarComponent
   ],
   imports: [
     BrowserModule,

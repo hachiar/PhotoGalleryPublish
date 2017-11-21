@@ -1,9 +1,4 @@
 
 <div [title]="rating" class="rating">
-	<i class="fa {{fullHeart}}" *ngFor='let fs of totalFull' aria-hidden="true"></i>
-	
-	<i class="fa {{halfHeart}}" *ngIf='half' aria-hidden="true"></i>
-	
-	<i class="fa {{emptyHeart}}" *ngFor='let es of totalEmpty' aria-hidden="true"></i>
-
+	<i *ngFor='let star of ratingStars' class="fa {{star.type}}" aria-hidden="true"></i>
 </div>

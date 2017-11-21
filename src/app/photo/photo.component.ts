@@ -14,7 +14,7 @@ export class PhotoComponent implements OnInit {
 			"name": "Photo Name",
 			"url": "https://image.freepik.com/free-vector/collection-of-cartoon-christmas-trees_23-2147717781.jpg",
 			"rating": 5,
-			"ratingArray": new Array(5).fill().map((x,i)=>i),
+			//new Array(5).fill().map((x,i)=>i)
 			"favorite": true
 		};
 	

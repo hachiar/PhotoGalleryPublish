@@ -1,5 +1,5 @@
 
-import { Component, OnChanges } from '@angular/core';
+import { Component, OnChanges, Input } from '@angular/core';
 
 @Component({
 	selector: 'app-star',
@@ -8,55 +8,64 @@ import { Component, OnChanges } from '@angular/core';
 })
 
 export class StarComponent implements OnChanges{
-	rating:number;
-	rateWidth:number;
-	maxRating:number = 5;
 	
-	totalFull:number[];
-	totalEmpty:number[];
-	half:boolean = false;
+	@Input() rating:number;//where to obtain the rating
+	maxRating:number = 5;//the max amount of stars
 	
-	fullHeart:string = "fa-star";
-	emptyHeart:string = "fa-star-o";
-	halfHeart:string = "fa-star-half-o";
+	totalFull:number;//total amount of full stars
+	totalEmpty:number;//total amount of empty stars
+	half:boolean = false;//do we have a half star?
 	
-	/**
-	* @constructor
-	* @param rate {number} the rating
-	*/
-	constructor(rate:number){
-		this.rating = rate;
-		this.determineStars();
-	}//end constructor
+	ratingStars:any[];//store the types of stars we need
+	
+	//all the possible types of stars
+	fullStar:string = "fa-star";
+	emptyStar:string = "fa-star-o";
+	halfStar:string = "fa-star-half-o";
+	
 	
 	/**
 	* Determine how many stars we need to show for a rating
 	* @see array.fill(value, start, end)
 	*/
 	determineStars(){
+		this.ratingStars = [];
 		//grab anything that would make it part of a star
-		var not_whole = this.rating%1;
-		var empty_heart_extra = 0;
+		var not_whole:number = this.rating%1;
+		var empty_heart_extra:number = 0;
 		//find out how many TOTAL FULL stars we need
-		var heartsNeeded = this.rating/1 - not_whole;
-		this.totalFull.fill(0,0,heartsNeeded);
+		this.totalFull = this.rating/1 - not_whole;
+		this.addStars(this.fullStar, this.totalFull);
 		
-		//if it's more than half, show half
-		if(not_whole > 0.49){
+		//totalEmpty should be total allowed - total full stars
+		this.totalEmpty = (this.maxRating - this.totalFull);
+		
+		if(not_whole > 0.49){//if it's more than half, show half
 			this.half = true;
-		}else{
-			this.half = false;
-			empty_heart_extra = (not_whole > 0) ? 1 : 0;
+			this.ratingStars.push({"type": this.halfStar});
+			this.totalEmpty --;//since we are adding one, remove 1 from empty
 		}//end if: do we wanna add a half star?
 		
-		//empty stars are anything not
-		var leftover = (this.maxRating - this.totalFull) + empty_heart_extra;
-		this.totalEmpty.fill(0,0,leftover);
-		
+		//add the empty stars
+		this.addStars(this.emptyStar, this.totalEmpty);
 	}//end function: determineStars
 	
+	/**
+	* Add stars needed to the stars rating array
+	* @param star {string} the type of star
+	* @param amt {number} amount of of this star to add
+	*/
+	addStars(star:string, amt:number){
+		for(var i = 0; i < amt; i++){
+			this.ratingStars.push({"type": star});
+		}//end for: go through as many as we need
+	}//end function: addStars
+	
+	/**
+	* Go through and update the amount/type of stars we need
+	*/
 	ngOnChanges():void{
-		this.rateWidth = this.rating;
+		this.determineStars();
 	}//end OnChanges
 	
 }//end class: StarComponent

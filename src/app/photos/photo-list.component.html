@@ -28,10 +28,9 @@
 			 [title]='photo.name'/><br>
 
 		<div class="table-row">
-			<div  class="table-cell">
+			<div class="table-cell">
 				<b>{{photo.name}}</b><br/>
-				<!-- <app-star></app-star> -->
-				<b>rating:</b> {{photo.rating}} <br>
+				<app-star [rating]='photo.rating'></app-star>
 			</div>
 			<span class="table-cell">
 				<i class="fa fa-heart" aria-hidden="true" *ngIf='photo.favorite'></i>

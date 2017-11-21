@@ -42,7 +42,7 @@ export class PhotoListComponent implements OnInit{
 			"id" : 4,
 			"name": "Lebkuchenmann",
 			"url" : "https://image.freepik.com/free-vector/pack-of-nice-gingerbread-cookies_23-2147714300.jpg",
-			"rating" : 4,
+			"rating" : 3.2,
 			"favorite" : false
 		}
 	];
