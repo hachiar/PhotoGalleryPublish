@@ -1,0 +1,9 @@
+.photoPrev{
+	margin:1em;
+	display:inline-block;
+	overflow:auto;
+}
+
+.photoPrev img{
+	width:150px;
+}

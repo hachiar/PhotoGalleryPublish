@@ -1,0 +1,21 @@
+<h1>{{pageTitle}}</h1>
+
+<h3>Show Photos</h3>
+<label>Favorites:</label> <input type="radio" name="photoType" [(ngModel)]='photoType' value="Favorite">
+<label>All:</label> <input type="radio" [(ngModel)]='photoType' name="photoType" value="All">
+
+<h2>Showing {{photoType}} Photos</h2>
+
+<div *ngIf='photos && photos.length'>
+	<div *ngFor='let photo of photos' class='photoPrev'>
+		<b>id:</b> {{photo.id}} <br>
+		<b>name:</b> {{photo.name}} <br>
+		<img	[src]='photo.url' 
+				[title]='photo.name'
+				/><br>
+		<b>rating:</b> {{photo.rating}} <br>
+	</div>
+
+</div>
+
+<!--[style.width]='thumbWidth' -->
