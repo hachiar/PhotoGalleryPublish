@@ -33,8 +33,7 @@
 				<app-star [rating]='photo.rating'></app-star>
 			</div>
 			<span class="table-cell">
-				<i class="fa fa-heart" aria-hidden="true" *ngIf='photo.favorite'></i>
-				<i class="fa fa-heart-o" aria-hidden="true" *ngIf='!photo.favorite'></i>
+				<app-heart [favorite]='photo.favorite'></app-heart>
 			</span>
 		</div>
 

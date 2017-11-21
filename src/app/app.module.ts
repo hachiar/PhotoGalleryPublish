@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { PhotoListComponent } from './photos/photo-list.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { StarComponent } from './shared/star.component';
+import { HeartComponent } from './shared/heart.component';
 import { PhotoComponent } from './photo/photo.component';
 
 
@@ -13,7 +14,8 @@ import { PhotoComponent } from './photo/photo.component';
     AppComponent,
 	PhotoListComponent,
     PhotoComponent,
-	StarComponent
+	StarComponent,
+	HeartComponent
   ],
   imports: [
     BrowserModule,
