@@ -1,15 +1,11 @@
-<h2>{{photo.name}}</h2>
 
 <div class="single-photo-container">
+	<h2>{{photo.name}} <app-heart [favorite]='photo.favorite'></app-heart></h2>
 	<div class='single-photo-img'>
 		<img [src]='photo.url' [title]='photo.name' />		
 	</div>
-	<div class="single-photo-rating">
-		<span *ngFor="let index of photo.ratingArray"> &#9733; </span>
-	</div>
+	<h2><app-star [rating]='photo.rating'></app-star></h2>
 	<div class="single-photo-desc">
-		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+		<p>{{photo.details}}</p>
 	</div>
 </div>
-
-<!--[style.width]='thumbWidth' -->

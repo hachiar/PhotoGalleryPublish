@@ -7,11 +7,13 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { StarComponent } from './shared/star.component';
 import { HeartComponent } from './shared/heart.component';
 import { PhotoComponent } from './photo/photo.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+	SidebarComponent,
 	PhotoListComponent,
     PhotoComponent,
 	StarComponent,

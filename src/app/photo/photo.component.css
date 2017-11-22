@@ -1,12 +1,12 @@
-.single-photo-container {
-	width: 80vw;
-}
+
 
 .single-photo-img {
-	width: 100%;
+	text-align:center;
 }
 
 .single-photo-img img {
-	width: 100%;
 	max-height: 400px;
+}
+.single-photo-container{
+	margin:1em;
 }

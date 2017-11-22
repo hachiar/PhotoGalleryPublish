@@ -1,5 +1,5 @@
 
-import { Component, OnChanges, Input } from '@angular/core';
+import { Component, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
 	selector: 'app-star',
@@ -23,6 +23,12 @@ export class StarComponent implements OnChanges{
 	emptyStar:string = "fa-star-o";
 	halfStar:string = "fa-star-half-o";
 	
+	@Output() ratingClicked: EventEmitter<number> = new EventEmitter();
+	
+	onClick(){
+		console.log("Wir haben die Wertung gedrückt.");
+		this.ratingClicked.emit(this.rating);
+	}
 	
 	/**
 	* Determine how many stars we need to show for a rating

@@ -1,0 +1,6 @@
+<div id="sidebar">
+	<ul class="navigation">
+		<!-- links to pages should go here -->
+		<li *ngFor='let p of pageList' [id]='p' (click)='selectPage()'>{{p}}</li>
+	</ul>
+</div>

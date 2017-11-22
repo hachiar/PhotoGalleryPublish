@@ -11,12 +11,17 @@
 <h2>Favorite Photos</h2>
 <div *ngIf='favoritePhotos && favoritePhotos.length'>
 	<div *ngFor='let favPhoto of favoritePhotos' class='photoPrev'>
-		<b>id:</b> {{favPhoto.id}} <br>
-		<b>name:</b> {{favPhoto.name}} <br>
 		<img	[src]='favPhoto.url' 
 				[title]='favPhoto.name'
 				/><br>
-		<b>rating:</b> {{favPhoto.rating}} <br>
+		<div class="table-row">
+			<div class="table-cell">
+				<b>{{favPhoto.name}}</b><br/>
+				<app-star [rating]='favPhoto.rating' (ratingClicked)='updateRating($event)'></app-star>
+			</div>
+			<span class="table-cell">
+				<app-heart [favorite]='favPhoto.favorite' (favoriteClicked)='updateFav($event)'></app-heart>
+			</span>
 	</div>
 </div>
 

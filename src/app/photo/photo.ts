@@ -3,6 +3,7 @@ export interface IPhoto {
 	name:string;
 	url:string;
 	rating:number;
+	details:string;
 	//ratingArray:number;
 	favorite:boolean;
 }

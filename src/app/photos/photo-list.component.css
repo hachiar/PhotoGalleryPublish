@@ -2,6 +2,7 @@
 	margin:1em;
 	display:inline-block;
 	overflow:auto;
+	text-align:center;
 }
 
 .photoPrev img{

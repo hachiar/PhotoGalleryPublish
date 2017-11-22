@@ -3,6 +3,8 @@ body {
 	height: auto;
 	min-height: 100%;
 	margin: 0;
+	font-family:arial;
+	color:#17202A;
 }
 
 #wrapper {
@@ -10,14 +12,9 @@ body {
 	height: 100%;
 }
 
-#sidebar{
-	position: fixed;
-	width: 230px;
-	top: 0;
-	bottom: 0;
-	border: 1pt solid black;
-}
+
 
 #main-content {
-	margin-left: 270px;
+	margin-left: 15em;
+	padding:1em;
 }

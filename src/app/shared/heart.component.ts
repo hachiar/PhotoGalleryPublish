@@ -1,5 +1,5 @@
 
-import { Component, OnChanges, Input } from '@angular/core';
+import { Component, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
 	selector: 'app-heart',
@@ -10,12 +10,18 @@ import { Component, OnChanges, Input } from '@angular/core';
 export class HeartComponent implements OnChanges{
 	
 	@Input() favorite:boolean;//where to obtain the rating
-
+	
 	//all the possible types of stars
 	favHeart:string = "fa-heart";
 	notFavHeart:string = "fa-heart-o";
 	showHeart:string;
 	
+	@Output() favoriteClicked: EventEmitter<boolean> = new EventEmitter();
+	
+	onClick(){
+		console.log("Wir haben das Herz gedrückt.");
+		this.favoriteClicked.emit(this.favorite);
+	}
 	
 	/**
 	* Go through and update the amount/type of stars we need

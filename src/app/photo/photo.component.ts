@@ -11,10 +11,16 @@ export class PhotoComponent implements OnInit {
 	photo: IPhoto = 
 		{
 			"id": 0,
-			"name": "Photo Name",
+			"name": "Weihnachtsbaum",
 			"url": "https://image.freepik.com/free-vector/collection-of-cartoon-christmas-trees_23-2147717781.jpg",
 			"rating": 5,
-			//new Array(5).fill().map((x,i)=>i)
+			"details" : `"Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+		nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+		reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+		pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+		culpa qui officia deserunt mollit anim id est laborum."`,
 			"favorite": true
 		};
 	
