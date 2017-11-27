@@ -28,3 +28,5 @@ export class PhotoViewComponent implements OnInit {
 		console.log("Hey we're in oninit!");
 	}
 }
+
+// hi
