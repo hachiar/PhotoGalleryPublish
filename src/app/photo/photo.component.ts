@@ -3,11 +3,11 @@ import { IPhoto } from './photo';
 
 @Component({
 	selector: 'app-photo',
-	templateUrl: './photo-view.component.html',
-	styleUrls: ['./photo-view.component.css']
+	templateUrl: './photo.component.html',
+	styleUrls: ['./photo.component.css']
 })
 
-export class PhotoViewComponent implements OnInit {
+export class PhotoComponent implements OnInit, IPhoto {
 	photo: IPhoto = 
 		{
 			"id": 0,

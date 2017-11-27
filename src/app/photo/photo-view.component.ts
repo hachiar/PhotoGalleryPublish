@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IPhoto } from './photo';
 
 @Component({
-	selector: 'app-photo',
+	selector: 'app-photo-view',
 	templateUrl: './photo-view.component.html',
 	styleUrls: ['./photo-view.component.css']
 })
