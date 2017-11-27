@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IPhoto } from './photo';
+import { IPhoto } from './../shared/photo';
 
 @Component({
 	selector: 'app-photo-view',
@@ -28,5 +28,3 @@ export class PhotoViewComponent implements OnInit {
 		console.log("Hey we're in oninit!");
 	}
 }
-
-// hi

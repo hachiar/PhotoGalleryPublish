@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IPhoto } from './photo';
+import { IPhoto } from './../shared/photo';
 
 @Component({
 	selector: 'app-photos',

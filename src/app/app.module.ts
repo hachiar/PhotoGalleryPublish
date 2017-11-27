@@ -6,7 +6,7 @@ import { PhotoListComponent } from './photos/photo-list.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { StarComponent } from './shared/star.component';
 import { HeartComponent } from './shared/heart.component';
-import { PhotoViewComponent } from './photo/photo-view.component';
+import { PhotoViewComponent } from './photo-view/photo-view.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 
