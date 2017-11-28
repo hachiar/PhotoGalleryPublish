@@ -1,0 +1,10 @@
+<div class="single-photo-container">
+	<h2>{{photo.name}} <app-heart [favorite]='photo.favorite'></app-heart></h2>
+	<div class='single-photo-img'>
+		<img [src]='photo.url' [title]='photo.name' />		
+	</div>
+	<h2><app-star [rating]='photo.rating'></app-star></h2>
+	<div class="single-photo-desc">
+		<p>{{photo.details}}</p>
+	</div>
+</div>
