@@ -38,7 +38,9 @@ export class PhotoListComponent implements OnInit{
 			switchFavorite():void{
 				console.log("On Init - photo-list - PhotoComponent - 1");
 			},
-			setFavorite();
+			switchFavorite():void{
+				this.favorite = this.favorite ? false : true;
+			};
 		},{
 			"id" : 2,
 			"name": "Adventskalender",
@@ -128,9 +130,9 @@ export class PhotoListComponent implements OnInit{
 		console.log("Wir haben die Wertung " + rate + " erhalten.");
 	}
 	
-	updateFav(fav:boolean): void{
+	updateFav(fav:boolean, photo:PhotoComponent): void{
 		console.log("Dieses Bild ist dein Lieblingsbild: " + fav.toString());
-		//switchFavorite();
+		photo.switchFavorite();
 	}
 	
 	setFavorites():PhotoComponent[]{
