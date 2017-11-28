@@ -8,14 +8,25 @@ import { IPhoto } from './../shared/photo';
 })
 
 export class PhotoComponent implements OnInit, IPhoto {
-	id: 0;
-	name: "Name";
-	url: "url";
-	rating: 5;
-	details: "Details";
-	favorite: true;
+	id: number;
+	name: string;
+	url: string;
+	rating: number;
+	details: string;
+	favorite: boolean;
 	
-	ngOnInit():void{
-		console.log("Hey we're in oninit!");
+	constructor(props:any){
+		this.id = props.id;
+		this.name = props.name;
+		this.url = props.url;
+		this.rating = props.rating;
+		this.details = props.details;
+		this.favorite = props.favorite;
+	}
+	
+	ngOnInit():void{ }
+
+	switchFavorite():void{	
+		this.favorite = this.favorite ? false : true;
 	}
 }

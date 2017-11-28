@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { PhotoListComponent } from './photos/photo-list.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { StarComponent } from './shared/star.component';
@@ -13,11 +13,11 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 @NgModule({
   declarations: [
     AppComponent,
-	SidebarComponent,
-	PhotoListComponent,
+    SidebarComponent,
+    PhotoListComponent,
     PhotoViewComponent,
-	StarComponent,
-	HeartComponent
+    StarComponent,
+    HeartComponent
   ],
   imports: [
     BrowserModule,

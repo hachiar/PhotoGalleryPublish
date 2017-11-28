@@ -20,7 +20,7 @@
 				<app-star [rating]='favPhoto.rating' (ratingClicked)='updateRating($event)'></app-star>
 			</div>
 			<span class="table-cell">
-				<app-heart [favorite]='favPhoto.favorite' (favoriteClicked)='updateFav($event)'></app-heart>
+				<app-heart [favorite]='favPhoto.favorite' (favoriteClicked)='updateFav($event, favPhoto)'></app-heart>
 			</span>
 	</div>
 </div>
@@ -38,7 +38,7 @@
 				<app-star [rating]='photo.rating'></app-star>
 			</div>
 			<span class="table-cell">
-				<app-heart [favorite]='photo.favorite'></app-heart>
+				<app-heart [favorite]='photo.favorite' (favoriteClicked)='updateFav($event, photo)'></app-heart>
 			</span>
 		</div>
 
