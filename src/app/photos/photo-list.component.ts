@@ -24,7 +24,10 @@ export class PhotoListComponent implements OnInit{
 			"favorite" : true,
 			ngOnInit():void{
 				console.log("On Init - photo-list - PhotoComponent - 0");
-			}
+			},
+			switchFavorite():void{
+				this.favorite = this.favorite ? false : true;
+			};
 		},{
 			"id" :1,
 			"name": "Tiere tragen einen Pulli",
@@ -32,9 +35,10 @@ export class PhotoListComponent implements OnInit{
 			"rating" : 4,
 			"details" : "",
 			"favorite" : true,
-			ngOnInit():void{
+			switchFavorite():void{
 				console.log("On Init - photo-list - PhotoComponent - 1");
-			}
+			},
+			setFavorite();
 		},{
 			"id" : 2,
 			"name": "Adventskalender",
@@ -44,7 +48,10 @@ export class PhotoListComponent implements OnInit{
 			"favorite" : false,
 			ngOnInit():void{
 				console.log("On Init - photo-list - PhotoComponent - 2");
-			}
+			},
+			switchFavorite():void{
+				this.favorite = this.favorite ? false : true;
+			};
 		},{
 			"id" : 3,
 			"name": "Schneemann",
@@ -54,7 +61,10 @@ export class PhotoListComponent implements OnInit{
 			"favorite" : true,
 			ngOnInit():void{
 				console.log("On Init - photo-list - PhotoComponent - 3");
-			}
+			},
+			switchFavorite():void{
+				this.favorite = this.favorite ? false : true;
+			};
 		},{
 			"id" : 4,
 			"name": "Lebkuchenmann",
@@ -64,7 +74,10 @@ export class PhotoListComponent implements OnInit{
 			"favorite" : false,
 			ngOnInit():void{
 				console.log("On Init - photo-list - PhotoComponent - 4");
-			}
+			},
+			switchFavorite():void{
+				this.favorite = this.favorite ? false : true;
+			};
 		},{
 			"id" : 5,
 			"name": "Lebkuchenhaus",
@@ -74,7 +87,10 @@ export class PhotoListComponent implements OnInit{
 			"favorite" : false,
 			ngOnInit():void{
 				console.log("On Init - photo-list - PhotoComponent - 5");
-			}
+			},
+			switchFavorite():void{
+				this.favorite = this.favorite ? false : true;
+			};
 		},{
 			"id" : 6,
 			"name": "Vogel",
@@ -84,7 +100,10 @@ export class PhotoListComponent implements OnInit{
 			"favorite" : false,
 			ngOnInit():void{
 				console.log("On Init - photo-list - PhotoComponent - 6");
-			}
+			},
+			switchFavorite():void{
+				this.favorite = this.favorite ? false : true;
+			};
 		},{
 			"id" : 7,
 			"name": "Tiere",
@@ -94,7 +113,10 @@ export class PhotoListComponent implements OnInit{
 			"favorite" : false,
 			ngOnInit():void{
 				console.log("On Init - photo-list - PhotoComponent - 7");
-			}
+			},
+			switchFavorite():void{
+				this.favorite = this.favorite ? false : true;
+			};
 		}
 	];
 	
@@ -108,6 +130,7 @@ export class PhotoListComponent implements OnInit{
 	
 	updateFav(fav:boolean): void{
 		console.log("Dieses Bild ist dein Lieblingsbild: " + fav.toString());
+		//switchFavorite();
 	}
 	
 	setFavorites():PhotoComponent[]{
@@ -116,7 +139,7 @@ export class PhotoListComponent implements OnInit{
 	}
 	
 	ngOnInit():void{
-		console.log("Hey we're in oninit!");
+		console.log("On Init - PhotoListComponent");
 	}
 }
 

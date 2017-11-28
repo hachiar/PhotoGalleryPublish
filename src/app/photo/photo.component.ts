@@ -15,7 +15,7 @@ export class PhotoComponent implements OnInit, IPhoto {
 	details: string;
 	favorite: boolean;
 	
-	ngOnInit():void{
-		console.log("On Init - PhotoComponent");
-	}
+	ngOnInit():void{ }
+
+	switchFavorite():void{	}
 }
