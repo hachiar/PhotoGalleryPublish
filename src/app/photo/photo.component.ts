@@ -15,6 +15,15 @@ export class PhotoComponent implements OnInit, IPhoto {
 	details: string;
 	favorite: boolean;
 	
+	constructor(props:any){
+		this.id = props.id;
+		this.name = props.name;
+		this.url = props.url;
+		this.rating = props.rating;
+		this.details = props.details;
+		this.favorite = props.favorite;
+	}
+	
 	ngOnInit():void{ }
 
 	switchFavorite():void{	
