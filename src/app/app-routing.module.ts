@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PhotoComponent } from './photo/photo.component';
-import { PhotoListComponent } from './photos/photos.component';
+import { PhotoListComponent } from './photos/photo-list.component';
 import { HeartComponent } from './shared/heart.component';
 import { StarComponent } from './shared/star.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
