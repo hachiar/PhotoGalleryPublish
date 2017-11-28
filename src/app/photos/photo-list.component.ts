@@ -85,6 +85,7 @@ export class PhotoListComponent implements OnInit{
 	updateFav(fav:boolean, photo:PhotoComponent): void{
 		console.log("Dieses Bild ist dein Lieblingsbild: " + fav.toString());
 		photo.switchFavorite();
+		this.favoritePhotos = this.setFavorites();
 	}
 	
 	setFavorites():PhotoComponent[]{
@@ -95,5 +96,7 @@ export class PhotoListComponent implements OnInit{
 	ngOnInit():void{
 		console.log("On Init - PhotoListComponent");
 	}
+	
+	
 }
 
