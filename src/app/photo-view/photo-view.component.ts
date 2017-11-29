@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PhotoComponent } from './../photo/photo.component';
+import { PhotoService } from '../photo/photo.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
 	selector: 'app-photo-view',
@@ -8,6 +10,13 @@ import { PhotoComponent } from './../photo/photo.component';
 })
 
 export class PhotoViewComponent implements OnInit {
+	photo:PhotoComponent;
+	
+	constructor(private _route: ActivatedRoute,private _photoService: PhotoService){
+		console.log(this._route.snapshot.paramMap.get('id'));
+	}
+	
+	/*
 	photo: PhotoComponent = 
 		new PhotoComponent({
 			"id": 0,
@@ -23,8 +32,11 @@ export class PhotoViewComponent implements OnInit {
 							culpa qui officia deserunt mollit anim id est laborum."`,
 			"favorite": true
 		});
-	
+	*/
 	ngOnInit():void{
 		console.log("On Init - photo-view component");
+		let id = +this._route.snapshot.paramMap.get('id');
+		//this.photo = this._photoService.getPhoto(id);
+		
 	}
 }

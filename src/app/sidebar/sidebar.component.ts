@@ -8,7 +8,18 @@ import { Component, OnChanges } from '@angular/core';
 
 export class SidebarComponent implements OnChanges{
 	currentPage:string = "Dashboard";
-	pageList:string[]=["Dashboard","Favorites","All Photos"];
+	pageList:any[]=[	
+		{
+			"name":"Dashboard",
+			"route" : "gallery"
+		},{
+			"name" : "Favorites",
+			"route" : "favorites"
+		},{
+			"name" :"All Photos",
+			"route" : "gallery"
+		}
+	];
 	
 	selectPage():void{
 		console.log("Wie geht's?");

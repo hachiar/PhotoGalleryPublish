@@ -8,7 +8,7 @@ import { StarComponent } from './shared/star.component';
 import { HeartComponent } from './shared/heart.component';
 import { PhotoViewComponent } from './photo-view/photo-view.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,14 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   imports: [
     BrowserModule,
 	FormsModule,
-	AngularFontAwesomeModule
+	AngularFontAwesomeModule,
+	RouterModule.forRoot([
+		{ path: 'gallery', component: PhotoListComponent },
+		{ path: 'favorites', component: PhotoListComponent },
+		{ path: 'photo/:id', component: PhotoViewComponent },
+		{ path: '', redirectTo: 'gallery', pathMatch: 'full' },
+		{ path: '**', redirectTo: 'gallery', pathMatch: 'full'}
+	])
   ],
   providers: [],
   bootstrap: [AppComponent]

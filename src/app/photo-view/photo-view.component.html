@@ -1,4 +1,4 @@
-<div class="single-photo-container">
+<div class="single-photo-container" *ngIf='photo'>
 	<h2>{{photo.name}} <app-heart [favorite]='photo.favorite'></app-heart></h2>
 	<div class='single-photo-img'>
 		<img [src]='photo.url' [title]='photo.name' />		

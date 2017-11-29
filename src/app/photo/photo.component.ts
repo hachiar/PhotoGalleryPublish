@@ -15,6 +15,7 @@ export class PhotoComponent implements OnInit, IPhoto {
 	details: string;
 	favorite: boolean;
 	
+	
 	constructor(props:any){
 		this.id = props.id;
 		this.name = props.name;
@@ -23,6 +24,7 @@ export class PhotoComponent implements OnInit, IPhoto {
 		this.details = props.details;
 		this.favorite = props.favorite;
 	}
+	
 	
 	ngOnInit():void{ }
 
