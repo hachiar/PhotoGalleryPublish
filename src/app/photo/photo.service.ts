@@ -9,7 +9,7 @@ export class PhotoService{
 			"Weihnachtsbaum",
 			"https://image.freepik.com/free-vector/collection-of-cartoon-christmas-trees_23-2147717781.jpg",
 			3.5,
-			"",
+			"Weihnachstbaum!!",
 			true
 		),new Photo(
 			1,
@@ -30,14 +30,14 @@ export class PhotoService{
 			"Schneemann",
 			"https://image.freepik.com/free-vector/snowmen-background-in-vintage-style_23-2147714212.jpg",
 			4.8,
-			"",
+			"Frosty!",
 			true
 		),new Photo(
 			4,
 			"Lebkuchenmann",
 			"https://image.freepik.com/free-vector/pack-of-nice-gingerbread-cookies_23-2147714300.jpg",
 			3.2,
-			"",
+			"Ich bin ein Lebkuchenmann!",
 			false
 		),new Photo(
 			5,
@@ -51,14 +51,14 @@ export class PhotoService{
 			"Vogel",
 			"https://image.freepik.com/free-vector/cute-birds-with-winter-clothes_23-2147584063.jpg",
 			3.8,
-			"",
+			"Ich singt gern!",
 			false
 		),new Photo(
 			7,
 			"Tiere",
 			"https://image.freepik.com/free-vector/set-of-birds-and-nice-forest-animals-wearing-winter-clothes_23-2147580403.jpg",
 			3.8,
-			"",
+			"Hallo! Wie geht's!",
 			false
 		)
 	];
