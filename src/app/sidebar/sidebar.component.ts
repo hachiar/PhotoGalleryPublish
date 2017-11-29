@@ -9,14 +9,11 @@ import { Component } from '@angular/core';
 export class SidebarComponent{
 	pageList:any[]=[	
 		{
-			"name":"Dashboard",
+			"name" :"All Photos",
 			"route" : "gallery"
 		},{
 			"name" : "Favorites",
 			"route" : "favorites"
-		},{
-			"name" :"All Photos",
-			"route" : "gallery"
 		}
 	];
 }

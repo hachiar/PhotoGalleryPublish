@@ -1,24 +1,25 @@
-<h1>{{pageTitle}}</h1>
-
-<h2>Favorite Photos</h2>
-<div *ngIf='favoritePhotos && favoritePhotos.length'>
-	<div *ngFor='let favPhoto of favoritePhotos' class='photoPrev'>
-		<a [routerLink]="['/photo', favPhoto.id]"><img	[src]='favPhoto.url' 
-				[title]='favPhoto.name'
-				/></a><br>
-		<div class="table-row">
-			<div class="table-cell">
-				<a [routerLink]="['/photo', favPhoto.id]"><b>{{favPhoto.name}}</b></a><br/>
-				<app-star [rating]='favPhoto.p_rating' (ratingClicked)='updateRating($event)'></app-star>
-			</div>
-			<span class="table-cell">
-				<app-heart [favorite]='favPhoto.favorite' (favoriteClicked)='updateFav($event, favPhoto)'></app-heart>
-			</span>
+<div *ngIf='p_url == "/favorites"'>
+	<h2>Favorite Photos</h2>
+	<div *ngIf='favoritePhotos && favoritePhotos.length'>
+		<div *ngFor='let favPhoto of favoritePhotos' class='photoPrev'>
+			<img	[routerLink]="['/photo', favPhoto.id]"
+					[src]='favPhoto.url' 
+					[title]='favPhoto.name' />
+			<br>
+			<div class="table-row">
+				<div class="table-cell">
+					<a [routerLink]="['/photo', favPhoto.id]"><b>{{favPhoto.name}}</b></a><br/>
+					<app-star [rating]='favPhoto.p_rating' (ratingClicked)='updateRating($event)'></app-star>
+				</div>
+				<span class="table-cell">
+					<app-heart [favorite]='favPhoto.favorite' (favoriteClicked)='updateFav($event, favPhoto)'></app-heart>
+				</span>
+		</div>
+		</div>
 	</div>
 </div>
 
-
-
+<div *ngIf='p_url == "/gallery"'>
 <h2>All Photos</h2>
 <div *ngIf='photos && photos.length'>
 	<div *ngFor='let photo of photos' class='photoPrev'>
@@ -36,5 +37,6 @@
 		</div>
 
 	</div>
+</div>
 </div>
 

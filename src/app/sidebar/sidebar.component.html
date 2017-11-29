@@ -1,7 +1,6 @@
 <div id="sidebar">
 	<ul class="navigation">
-		<!-- links to pages should go here -->
-		<li *ngFor='let p of pageList'[routerLink]="['/' + p.route]" [id]='p.name' routerLinkActive="selectedPage">
+		<li *ngFor='let p of pageList' [routerLink]="['/' + p.route]" [id]='p.name' routerLinkActive="selectedPage">
 			 {{p.name}}
 		</li>
 	</ul>

@@ -24,8 +24,9 @@ import { RouterModule } from '@angular/router';
 	FormsModule,
 	AngularFontAwesomeModule,
 	RouterModule.forRoot([
-		{ path: 'gallery', component: PhotoListComponent },
-		{ path: 'favorites', component: PhotoListComponent },
+		{ path: 'dashboard', component: PhotoListComponent },
+		{ path: 'favorites', component: PhotoListComponent},
+		{ path: 'gallery', component: PhotoListComponent},
 		{ path: 'photo/:id', component: PhotoViewComponent },
 		{ path: '', redirectTo: 'gallery', pathMatch: 'full' },
 		{ path: '**', redirectTo: 'gallery', pathMatch: 'full'}

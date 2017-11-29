@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Photo } from './photo';
-
 import { PhotoService } from './photo.service';
+import { Router } from '@angular/router';
+
 
 @Component({
 	//selector: 'app-photos',
@@ -16,11 +17,15 @@ export class PhotoListComponent implements OnInit{
 	photoType:string = "All";
 	favoritePhotos:Photo[];
 	photos:Photo[];
+	p_url:string;
 
 	/**
 	* @constructor
 	*/
-	constructor(private _photoService: PhotoService){}
+	constructor(private _photoService: PhotoService,
+				private _router: Router){
+		this.p_url = this._router.url;
+	}
 	
 	updateRating(rate:number): void{
 		console.log("Wir haben die Wertung " + rate + " erhalten.");
