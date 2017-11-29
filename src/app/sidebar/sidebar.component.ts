@@ -1,4 +1,4 @@
-import { Component, OnChanges } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
 	selector: 'app-sidebar',
@@ -6,8 +6,7 @@ import { Component, OnChanges } from '@angular/core';
 	styleUrls: ['./sidebar.component.css']
 })
 
-export class SidebarComponent implements OnChanges{
-	currentPage:string = "Dashboard";
+export class SidebarComponent{
 	pageList:any[]=[	
 		{
 			"name":"Dashboard",
@@ -20,15 +19,4 @@ export class SidebarComponent implements OnChanges{
 			"route" : "gallery"
 		}
 	];
-	
-	selectPage():void{
-		console.log("Wie geht's?");
-	}
-	
-	/**
-	* 
-	*/
-	ngOnChanges():void{
-		
-	}//end OnChanges
 }
