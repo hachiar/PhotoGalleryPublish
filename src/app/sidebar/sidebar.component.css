@@ -11,16 +11,21 @@
     list-style-type: none;
 	margin:1em 0;
 }
+.navigation a{
+	color:#fff;
+	text-decoration:none;
+}
 .navigation li{
 	padding:1em;
 	letter-spacing:0.01em;
 	font-weight:bold;
 }
-.navigation li:hover{
+.navigation li:hover, .navigation a:hover{
 	background-color:#2E86C1;
 	cursor:pointer;
 	
 }
+
 .selectedPage{
 	background-color:#EBEDEF;
 	color:#2E4053;

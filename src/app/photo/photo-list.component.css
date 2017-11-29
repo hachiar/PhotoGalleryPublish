@@ -17,3 +17,10 @@
 	padding:0.3em;
 	vertical-align:top;
 }
+a{
+	color:#2874A6;
+	text-decoration:none;
+}
+a:hover{
+	color:#6C3483;
+}
