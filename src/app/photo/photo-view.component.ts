@@ -36,7 +36,7 @@ export class PhotoViewComponent implements OnInit {
 	ngOnInit():void{
 		console.log("On Init - photo-view component");
 		let id = +this._route.snapshot.paramMap.get('id');
-		//this.photo = this._photoService.getPhoto(id);
+		this.photo = this._photoService.getPhoto(id);
 		
 	}
 }

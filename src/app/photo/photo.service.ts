@@ -73,4 +73,8 @@ export class PhotoService{
 		photo.favorite == true);
 	}
 	
+	getPhoto(id:number):Photo{
+		return this.photos.filter(item => item.id == id)[0]
+	}
+	
 }//end class
