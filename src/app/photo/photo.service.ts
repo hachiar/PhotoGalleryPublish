@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IPhoto, Photo } from './photo';
+import { Photo } from './photo';
 
 @Injectable()
 export class PhotoService{	
