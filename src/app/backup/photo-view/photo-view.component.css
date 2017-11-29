@@ -1,0 +1,10 @@
+.single-photo-img {
+	text-align:center;
+}
+
+.single-photo-img img {
+	max-height: 400px;
+}
+.single-photo-container{
+	margin:1em;
+}
