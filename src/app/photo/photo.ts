@@ -24,5 +24,6 @@ export class Photo implements IPhoto{
 	getFavorite():boolean{
 		return this.favorite;
 	}	
+	
 }//end class: Photo
 

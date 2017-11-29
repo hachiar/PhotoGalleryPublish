@@ -36,14 +36,15 @@ export class PhotoListComponent implements OnInit{
 	updateFav(fav:boolean, photo:Photo): void{
 		console.log("Dieses Bild ist dein Lieblingsbild: " + fav.toString());
 		//photo.switchFavorite();
+		console.log(photo);
+		this._photoService.updateFavorites(photo, fav);
 		this.favoritePhotos = this.setFavorites();
 	}//end function: updateFav
 	
 	
 	
 	setFavorites():Photo[]{
-		return this.photos.filter((photo: Photo) => 
-		photo.favorite == true);
+		return this._photoService.getFavorites();
 	}//end function: setFavorites
 	
 }

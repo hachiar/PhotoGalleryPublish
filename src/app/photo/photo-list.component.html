@@ -9,7 +9,7 @@
 		<div class="table-row">
 			<div class="table-cell">
 				<a [routerLink]="['/photo', favPhoto.id]"><b>{{favPhoto.name}}</b></a><br/>
-				<app-star [rating]='favPhoto.rating' (ratingClicked)='updateRating($event)'></app-star>
+				<app-star [rating]='favPhoto.p_rating' (ratingClicked)='updateRating($event)'></app-star>
 			</div>
 			<span class="table-cell">
 				<app-heart [favorite]='favPhoto.favorite' (favoriteClicked)='updateFav($event, favPhoto)'></app-heart>
@@ -27,7 +27,7 @@
 		<div class="table-row">
 			<div class="table-cell">
 				<a [routerLink]="['/photo', photo.id]"><b>{{photo.name}}</b></a><br/>
-				<app-star [rating]='photo.rating'></app-star>
+				<app-star [rating]='photo.p_rating'></app-star>
 			</div>
 			<span class="table-cell">
 				<app-heart [favorite]='photo.favorite' (favoriteClicked)='updateFav($event, photo)'></app-heart>
