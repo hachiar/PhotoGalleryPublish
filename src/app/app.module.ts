@@ -9,6 +9,7 @@ import { HeartComponent } from './shared/heart.component';
 import { PhotoViewComponent } from './photo/photo-view.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
+//import { PhotoService } from './photo/photo.service';
 
 @NgModule({
   declarations: [

@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IPhoto } from './../shared/photo';
-import { PhotoComponent } from './../photo/photo.component';
+import { Photo } from './photo';
 
-import { PhotoService } from '../photo/photo.service';
+import { PhotoService } from './photo.service';
 
 @Component({
 	//selector: 'app-photos',
@@ -15,8 +14,8 @@ export class PhotoListComponent implements OnInit{
 	thumbWidth:number = 150;
 	thumbMarg:number = 1;
 	photoType:string = "All";
-	favoritePhotos:PhotoComponent[];
-	photos:PhotoComponent[];
+	favoritePhotos:Photo[];
+	photos:Photo[];
 
 	/**
 	* @constructor
@@ -27,9 +26,9 @@ export class PhotoListComponent implements OnInit{
 		console.log("Wir haben die Wertung " + rate + " erhalten.");
 	}//end function: updateRating
 	
-	updateFav(fav:boolean, photo:PhotoComponent): void{
+	updateFav(fav:boolean, photo:Photo): void{
 		console.log("Dieses Bild ist dein Lieblingsbild: " + fav.toString());
-		photo.switchFavorite();
+		//photo.switchFavorite();
 		this.favoritePhotos = this.setFavorites();
 	}//end function: updateFav
 	
@@ -39,8 +38,8 @@ export class PhotoListComponent implements OnInit{
 		this.favoritePhotos = this.setFavorites();
 	}//end function: ngOnInit
 	
-	setFavorites():PhotoComponent[]{
-		return this.photos.filter((photo: PhotoComponent) => 
+	setFavorites():Photo[]{
+		return this.photos.filter((photo: Photo) => 
 		photo.favorite == true);
 	}//end function: setFavorites
 	

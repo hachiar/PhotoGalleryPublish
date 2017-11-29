@@ -2,12 +2,8 @@ import { Injectable } from '@angular/core';
 import { Photo } from './photo';
 
 @Injectable()
-
-export class PhotoService{
-	
-	constructor(){}
-	
-	photos:Photo[] = [
+export class PhotoService{	
+	photos = [
 		{
 			"id" :0,
 			"name": "Weihnachtsbaum",
@@ -67,7 +63,7 @@ export class PhotoService{
 		}
 	];
 	
-	getPhotos():Photo[]{
+	getPhotos(){
 		return this.photos;
 	}
 	

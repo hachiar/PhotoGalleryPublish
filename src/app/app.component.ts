@@ -11,3 +11,4 @@ import { PhotoService } from './photo/photo.service';
 export class AppComponent {
   title = 'My Gallery';
 }
+

@@ -22,7 +22,7 @@ export class Photo implements IPhoto{
 	
 	
 	setFavorite(fav:boolean):void{
-		this.favorite = !!favorite;
+		this.favorite = !!this.favorite;
 	}
 	getFavorite():boolean{
 		return this.favorite;

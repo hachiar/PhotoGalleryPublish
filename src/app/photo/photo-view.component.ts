@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Photo } from './../photo/photo';
-import { PhotoService } from '../photo/photo.service';
+import { Photo } from './photo';
+import { PhotoService } from './photo.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class PhotoViewComponent implements OnInit {
-	photo:PhotoComponent;
+	photo:Photo;
 	
 	constructor(private _route: ActivatedRoute,private _photoService: PhotoService){
 		console.log(this._route.snapshot.paramMap.get('id'));
